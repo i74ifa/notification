@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>App</title>
+    <style>
+        @font-face {
+            font-family: 'Droid Arabic Kufi';
+            src: url('/fonts/DroidKufi-Bold.woff');
+            src: url('/fonts/DroidKufi-Regular.woff');
+        }
+
+        * {
+            font-family: 'Droid Arabic Kufi';
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="px-3 py-2 navbar-dark bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="#" class="nav-link text-secondary">
+                            ▃▃
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            ▃▃▃▃
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            ▃▃
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            ▃▃▃
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            ▃▃▃▃
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="notification-group">
+        <div id="notification">
+            <div class="notification my-2 mr-5">
+                <audio src="/cc.mp3" autoplay></audio>
+                <div class="notification-line"></div>
+                <div class="right-notification center" onclick="closed(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                    </svg>
+                </div>
+                <div class="center h-100">
+                    <span>▃▃▃▃▃▃</span>
+                    <small>▃▃▃▃▃▃▃▃▃▃▃▃▃</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="text-center py-5">
+            <h2>▃▃▃▃▃▃</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="card col shadow" style="min-height: 500px">
+                <div class="card-header text-center py-3">▃▃▃▃▃</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">▃▃ ▃▃▃▃</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                        name="exampleInputEmail1" aria-describedby="emailHelp"
+                                        placeholder="▃▃▃▃▃▃">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">▃▃▃ ▃▃▃</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="▃▃▃▃▃▃ ▃▃▃ ▃▃▃▃">
+                                </div>▃
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">▃▃ ▃ ▃▃▃</label>
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-primary">▃▃▃</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script>
+        let validate = new Validate();
+        console.log(validate.isEnglish('dd'));
+        $('#submit').click(function (e) {
+            e.preventDefault()
+        })
+    </script>
+    <script>
+        $('#submit').click(function (e) {
+            console.log('good');
+            e.preventDefault()
+        })
+    </script>
+    <!-- Notification repetition -->
+    <script>
+        // 
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 5000);
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 5000);
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 2 * 5000);
+
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 4 * 5000);
+
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 10 * 5000);
+
+        setTimeout(() => {
+            $('.notification-group').append($('#notification').html())
+        }, 9 * 5000);
+    </script>
+    <script src="js/notification.js"></script>
+</body>
+
+</html>

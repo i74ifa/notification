@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Droid Arabic Kufi";
+    src: url("/fonts/DroidKufi-Regular.woff");
+}
+
+.icon-close {
+    content: url("<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='currentColor' class='bi bi-x-square-fill' viewBox='0 0 16 16'><path d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z' /></svg>");
+}
+
+* {
+    font-family: "Droid Arabic Kufi";
+}
+/* Notification */
+.notification {
+    transition: 2s;
+    background-color: #eeeeee;
+    padding: 15px 0px;
+    position: relative;
+    margin: 5px;
+    border-radius: 18px;
+    width: 400px;
+    box-shadow:0 .5rem 3rem rgba(0,0,0,.25);
+    color: #222831;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+.left-notification,
+.right-notification {
+    transition: .7s;
+    width: 15%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    background-color: #222831b6;
+    color: #fff;
+}
+
+.left-notification {
+    border-radius: 18px 0 0 18px;
+    left: 0;
+}
+
+.right-notification {
+    border-radius: 0 18px 18px 0;
+    right: 0;
+    
+}
+.notification small {
+    font-size: 10px;
+    color: #aaa;
+    padding-top: 5px;
+}
+
+
+.notification-line {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    box-sizing: border-box;
+    width: 0;
+    bottom: 20%;
+    background-color: #222831;
+}
+
+/* animate */
+
+.notification:hover .left-notification  {
+    transition: .3s;
+    width: 100%;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.notification:hover .right-notification  {
+    transition: .6s;
+    width: 30%;
+    background-color: #dd0a35;
+    cursor: pointer;
+}
+
+.notification-group {
+    display: grid;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+/* end notification */
